@@ -1,0 +1,51 @@
+﻿@model IEnumerable<GLMS.Models.ServiceRequest>
+
+<h2>Service Requests</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">New Service Request</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Client</th>
+            <th>Contract Type</th>
+            <th>Contract Status</th>
+            <th>Description</th>
+            <th>Cost (USD)</th>
+            <th>Cost (ZAR)</th>
+            <th>Request Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.Client?.Name</td>
+                <td>@r.Contract?.ServiceLevel</td>
+
+                <td>
+                    <span class="badge @(r.Contract?.Status == "Active" ? "bg-success" :
+                                                                   r.Contract?.Status == "Expired" ? "bg-danger" :
+                                                                   r.Contract?.Status == "On Hold" ? "bg-warning text-dark" :
+                                                                   "bg-secondary")">
+                    @r.Contract?.Status
+                </span>
+            </td>
+
+                <td>@r.Description</td>
+
+                <td>$@(r.CostUSD.ToString("0.00"))</td>
+
+                <td>R@(r.CostZAR.ToString("0.00"))</td>
+
+                <td>@r.Status</td>
+
+                <td>
+                    <a asp-action="Details" asp-route-id="@r.Id" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@r.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+                }
+    </tbody>
+</table>

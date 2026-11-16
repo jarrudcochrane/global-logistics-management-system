@@ -1,0 +1,56 @@
+﻿@model GLMS.Models.ServiceRequest
+
+<h2>New Service Request</h2>
+<p class="text-muted">Current USD → ZAR Rate: <strong>@ViewBag.ExchangeRate</strong></p>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label asp-for="ClientId" class="form-label">Client</label>
+        <select asp-for="ClientId" asp-items="ViewBag.Clients" class="form-select">
+            <option value="">-- Select Client --</option>
+        </select>
+        <span asp-validation-for="ClientId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ContractType" class="form-label">Contract Type</label>
+        <select asp-for="ContractType" asp-items="ViewBag.ContractTypes" class="form-select">
+            <option value="">-- Select Contract Type --</option>
+        </select>
+        <span asp-validation-for="ContractType" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CostUSD" class="form-label">Cost in USD</label>
+        <input asp-for="CostUSD" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="CostUSD" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label"></label>
+        <select asp-for="Status" class="form-select">
+            <option>Pending</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+        </select>
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

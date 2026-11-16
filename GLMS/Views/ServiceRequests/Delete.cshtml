@@ -1,0 +1,7 @@
+﻿@model GLMS.Models.ServiceRequest
+<h2>Delete Service Request</h2>
+<p>Are you sure you want to delete: <strong>@Model.Description</strong>?</p>
+<form asp-action="Delete" method="post">
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

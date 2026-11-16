@@ -1,0 +1,39 @@
+﻿@model GLMS.Models.ServiceRequest
+
+<h2>Service Request Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">Client</dt>
+    <dd class="col-sm-9">@Model.Client?.Name</dd>
+
+    <dt class="col-sm-3">Contract Type</dt>
+    <dd class="col-sm-9">@Model.Contract?.ServiceLevel</dd>
+
+    <dt class="col-sm-3">Contract Status</dt>
+    <dd class="col-sm-9">
+        <span class="badge @(Model.Contract?.Status == "Active" ? "bg-success" :
+                                                         Model.Contract?.Status == "Expired" ? "bg-danger" :
+                                                         Model.Contract?.Status == "On Hold" ? "bg-warning text-dark" :
+                                                         "bg-secondary")">
+            @Model.Contract?.Status
+        </span>
+    </dd>
+
+    <dt class="col-sm-3">Description</dt>
+    <dd class="col-sm-9">@Model.Description</dd>
+
+    <dt class="col-sm-3">Cost USD</dt>
+    <dd class="col-sm-9">
+        $ @Model.CostUSD.ToString("N2")
+    </dd>
+
+    <dt class="col-sm-3">Cost ZAR</dt>
+    <dd class="col-sm-9">
+        R @Model.CostZAR.ToString("N2")
+    </dd>
+
+    <dt class="col-sm-3">Request Status</dt>
+    <dd class="col-sm-9">@Model.Status</dd>
+</dl>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>

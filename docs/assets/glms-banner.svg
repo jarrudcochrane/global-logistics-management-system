@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="GLMS: Global Logistics Management System. Clients, contracts, service requests and live currency conversion.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A3F"/>
+      <stop offset="1" stop-color="#123A58"/>
+    </linearGradient>
+    <style>
+      .route { fill: none; stroke: #E8A33D; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 10 14; animation: travel 2.4s linear infinite; }
+      .grid { stroke: #F5ECDF; stroke-opacity: .07; stroke-width: 1; }
+      .node { fill: #123A58; stroke: #E8A33D; stroke-width: 3; }
+      .pulse { fill: #E8A33D; animation: pulse 2.4s ease-in-out infinite; }
+      .p2 { animation-delay: .6s; } .p3 { animation-delay: 1.2s; } .p4 { animation-delay: 1.8s; }
+      .title { font: 700 84px 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #F5ECDF; letter-spacing: 6px; }
+      .sub { font: 400 26px 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #F5ECDF; }
+      .tag { font: 600 17px 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #E8A33D; letter-spacing: 3px; }
+      .label { font: 600 15px 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif; fill: #F5ECDF; fill-opacity: .85; }
+      @keyframes travel { to { stroke-dashoffset: -48; } }
+      @keyframes pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .route, .pulse { animation: none; } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="320" rx="18" fill="url(#bg)"/>
+
+  <g class="grid">
+    <path d="M0 80H1280M0 160H1280M0 240H1280"/>
+    <path d="M160 0V320M320 0V320M480 0V320M640 0V320M800 0V320M960 0V320M1120 0V320"/>
+  </g>
+
+  <text x="72" y="92" class="tag">ASP.NET CORE MVC  ·  .NET 8  ·  EF CORE</text>
+  <text x="68" y="186" class="title">GLMS</text>
+  <text x="72" y="232" class="sub">Global Logistics Management System</text>
+
+  <!-- Workflow route: client -> contract -> service request -> ZAR cost -->
+  <path class="route" d="M700 228 C 780 228, 780 108, 860 108 S 940 212, 1020 212 S 1100 96, 1180 96"/>
+
+  <g>
+    <circle class="node" cx="700" cy="228" r="13"/><circle class="pulse" cx="700" cy="228" r="5"/>
+    <circle class="node" cx="860" cy="108" r="13"/><circle class="pulse p2" cx="860" cy="108" r="5"/>
+    <circle class="node" cx="1020" cy="212" r="13"/><circle class="pulse p3" cx="1020" cy="212" r="5"/>
+    <circle class="node" cx="1180" cy="96" r="13"/><circle class="pulse p4" cx="1180" cy="96" r="5"/>
+  </g>
+
+  <g class="label" text-anchor="middle">
+    <text x="700" y="268">Clients</text>
+    <text x="860" y="76">Contracts</text>
+    <text x="1020" y="252">Service requests</text>
+    <text x="1180" y="64">USD → ZAR</text>
+  </g>
+</svg>
