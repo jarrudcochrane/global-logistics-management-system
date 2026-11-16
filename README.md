@@ -4,7 +4,7 @@
   <img src="docs/assets/glms-banner.svg" width="100%" alt="GLMS banner: Global Logistics Management System. Clients, contracts, service requests and live USD to ZAR conversion." />
 </p>
 
-# GLMS — Global Logistics Management System
+# GLMS: Global Logistics Management System
 
 **A centralised web platform for managing logistics clients, contracts and service requests.**
 
@@ -183,12 +183,12 @@ Deleting a client also deletes that client's contracts (cascade delete).
 <table>
   <tr>
     <td width="50%" valign="top" align="center">
-      <img src="https://github.com/user-attachments/assets/3e1ad301-a080-408a-8759-0cd5227089d4" width="100%" alt="Figure 1 — UML class diagram, part one." />
-      <br /><sub><b>Figure 1 — UML class diagram, part one.</b></sub>
+      <img src="https://github.com/user-attachments/assets/3e1ad301-a080-408a-8759-0cd5227089d4" width="100%" alt="Figure 1: UML class diagram, part one." />
+      <br /><sub><b>Figure 1: UML class diagram, part one.</b></sub>
     </td>
     <td width="50%" valign="top" align="center">
-      <img src="https://github.com/user-attachments/assets/f49cd80e-546b-47c1-8cec-e94954c0f40e" width="100%" alt="Figure 2 — UML class diagram, part two." />
-      <br /><sub><b>Figure 2 — UML class diagram, part two.</b></sub>
+      <img src="https://github.com/user-attachments/assets/f49cd80e-546b-47c1-8cec-e94954c0f40e" width="100%" alt="Figure 2: UML class diagram, part two." />
+      <br /><sub><b>Figure 2: UML class diagram, part two.</b></sub>
     </td>
   </tr>
 </table>
@@ -272,8 +272,8 @@ dotnet run
 The application opens in your browser at `https://localhost:7178`.
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/d4eb4e73-54c1-439b-8e2d-82c8180ba82d" width="313" alt="Figure 3 — The project running." />
-  <br /><sub><b>Figure 3 — The project running.</b></sub>
+  <img src="https://github.com/user-attachments/assets/d4eb4e73-54c1-439b-8e2d-82c8180ba82d" width="313" alt="Figure 3: The project running." />
+  <br /><sub><b>Figure 3: The project running.</b></sub>
 </p>
 
 <a id="database-script"></a>
@@ -420,12 +420,12 @@ The workflow in `.github/workflows/dotnet.yml` runs on every push and pull reque
 <table>
   <tr>
     <td width="50%" valign="top" align="center">
-      <img src="https://github.com/user-attachments/assets/bf27ecc0-3726-46f1-b5fe-b43cb769e275" width="100%" alt="Figure 4 — All unit tests passing in Test Explorer." />
-      <br /><sub><b>Figure 4 — All unit tests passing in Test Explorer.</b></sub>
+      <img src="https://github.com/user-attachments/assets/bf27ecc0-3726-46f1-b5fe-b43cb769e275" width="100%" alt="Figure 4: All unit tests passing in Test Explorer." />
+      <br /><sub><b>Figure 4: All unit tests passing in Test Explorer.</b></sub>
     </td>
     <td width="50%" valign="top" align="center">
-      <img src="https://github.com/user-attachments/assets/3c8c397d-91a5-482e-96ec-9b6f5a778644" width="100%" alt="Figure 5 — A successful GitHub Actions run." />
-      <br /><sub><b>Figure 5 — A successful GitHub Actions run.</b></sub>
+      <img src="https://github.com/user-attachments/assets/3c8c397d-91a5-482e-96ec-9b6f5a778644" width="100%" alt="Figure 5: A successful GitHub Actions run." />
+      <br /><sub><b>Figure 5: A successful GitHub Actions run.</b></sub>
     </td>
   </tr>
 </table>
@@ -527,19 +527,19 @@ Attribution comments are also included directly in the project files.
   **Author:** Microsoft  
   **Availability:** https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads
 
-- **Title:** Entity Framework Core — DbContext and CRUD operations  
+- **Title:** Entity Framework Core: DbContext and CRUD operations  
   **Author:** Microsoft  
   **Availability:** https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/
 
-- **Title:** Entity Framework Core — Querying Related Data (Include)  
+- **Title:** Entity Framework Core: Querying Related Data (Include)  
   **Author:** Microsoft  
   **Availability:** https://learn.microsoft.com/en-us/ef/core/querying/related-data/eager
 
-- **Title:** HttpClient — Consume a REST API  
+- **Title:** HttpClient: Consume a REST API  
   **Author:** Microsoft  
   **Availability:** https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/http/httpclient
 
-- **Title:** Exchange Rate API — Free Open Currency Exchange Rates API  
+- **Title:** Exchange Rate API: Free Open Currency Exchange Rates API  
   **Author:** Exchange Rate API  
   **Availability:** https://www.exchangerate-api.com/docs/free
 
